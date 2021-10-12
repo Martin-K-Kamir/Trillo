@@ -1,0 +1,105 @@
+
+///////////////////////////
+//* Container - settings
+///////////////////////////
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark-1);
+
+    min-height: 50rem;
+}
+
+///////////////////////////
+//* Header - settings
+///////////////////////////
+.header {
+    height: 5rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content {
+    display: flex;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+///////////////////////////
+//* Sidebar - settings
+///////////////////////////
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 14%; // 1. Flex growth 2. Flex shrink 3. Bases
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @media only screen and (max-width: $bp-normal) {
+        flex: 0 0 16%; // 1. Flex growth 2. Flex shrink 3. Bases
+    }
+}
+
+.hotel-view {
+    background-color: #fff;
+    flex: 1; //! 1 = protože chci aby element zabral celý místo containeru 
+}
+
+///////////////////////////
+//* Details of the hotel - settings
+///////////////////////////
+.detail {
+    font-size: 1rem;
+    display: flex;
+    padding: 3rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-tiny) {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+///////////////////////////
+//* Description of the hotel - settings
+///////////////////////////
+.description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light-1);
+    padding: 2rem 3rem;
+    flex: 0 0 68%;
+    margin-right: 3rem;
+
+    @media only screen and (max-width: $bp-tiny) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+
+///////////////////////////
+//* User reviews of the hotel - settings
+///////////////////////////
+.user-reviews {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-tiny) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+}
